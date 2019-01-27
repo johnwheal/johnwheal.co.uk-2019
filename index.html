@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.mosaic.js"></script>
 </head>
 <body>
     <header>
@@ -53,6 +56,114 @@
             <p>John has a particular interest in equity crowdfunding and has invested in over 25 companies, ranging from startups to established companies. A selection of his portfolio is shown below.</p>
             <img src="/images/investments.png" alt="John Wheal Investments" />
         </div>
+    </div>
+    <div class="section highlights">
+        <div class="page-container">
+            <h2>Highlights</h2>
+            <div class="line"></div>
+        </div>
+        <div id="myMosaic">
+            <div class="item withImage" width="591" height="788" style="background-image: url(/images/highlights/photo-1.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Judge at Debating Matters</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="1000" height="750" style="background-image: url(/images/highlights/photo-2.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Organised IET Great Egg Race</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="960" height="780" style="background-image: url(/images/highlights/photo-3.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Presented IET award at University of Portsmouth graduation ceremony</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="1000" height="750" style="background-image: url(/images/highlights/photo-4.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Founded Wheal Media Limited whilst at University</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="960" height="540" style="background-image: url(/images/highlights/photo-5.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Participated in Dynamo Business Challenge</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="600" height="800" style="background-image: url(/images/highlights/photo-6.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Found Group Hub Limited whilst at University</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="960" height="540" style="background-image: url(/images/highlights/photo-7.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Visited Cambridge University with the University of Portsmouth Enterprise Society</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="1000" height="487" style="background-image: url(/images/highlights/photo-8.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Represented NATS at the Heathrow Family Day</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="407" height="518" style="background-image: url(/images/highlights/photo-9.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Represented NATS at the Royal International Air Tattoo</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="947" height="630" style="background-image: url(/images/highlights/photo-10.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Awarded Highly Commended in the Young Startup Talent competition 2016</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="858" height="600" style="background-image: url(/images/highlights/photo-11.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Attended Startup Disruptors Award Ceremony</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="1000" height="803" style="background-image: url(/images/highlights/photo-12.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Awarded IET Technician of the Year Award 2017</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item withImage" width="1000" height="580" style="background-image: url(/images/highlights/photo-13.jpg);">
+                <div class="overlay">
+                    <div class="texts">
+                        <h1>Student speaker at graduation ceremony</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#myMosaic').Mosaic({
+                maxRowHeightPolicy: 'tail',
+                defaultAspectRatio: 1,
+                refitOnResize: true,
+                showTailWhenNotEnoughItemsForEvenOneRow: false,
+                highResImagesWidthThreshold: 850,
+            });
+        </script>
     </div>
     <div class="section social-media">
         <div class="page-container">
