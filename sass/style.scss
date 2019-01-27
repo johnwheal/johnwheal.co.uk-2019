@@ -1,1 +1,121 @@
 @import "reset";
+
+$fontRegular: 400;
+$fontBold: 700;
+
+$blueColor: #58ABE1;
+$whiteColor: #FFFFFF;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: $fontRegular;
+}
+
+b {
+  font-weight: $fontBold;
+}
+
+.page-container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/header-background.jpg');
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-size: cover;
+  position: relative;
+  background-position: bottom;
+
+  .johnwheal-photo {
+    background-image: url('/images/johnwheal.png');
+    width: 600px;
+    height: 90vh;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+    right: 5vw;
+  }
+}
+
+.views {
+  background-color: $blueColor;
+  padding: 20px 0;
+
+  h6 {
+    text-align: center;
+    font-size: 22px;
+    color: $whiteColor;
+  }
+}
+
+.about {
+  padding: 10vh 0;
+
+  .photo {
+    max-width: 400px;
+    width: 100%;
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .description {
+    max-width: 600px;
+    width: 100%;
+    display: inline-block;
+    margin-left: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 40px 0;
+    }
+  }
+}
+
+.amazing-everyday {
+  background-image: url('/images/amazing-everyday.jpg');
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  h4 {
+    color: $whiteColor;
+    font-size: 40px;
+    padding: 70px;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+  .button {
+    margin-left: 70px;
+    color: $whiteColor;
+    font-weight: $fontBold;
+    text-decoration: none;
+    border: solid 4px $whiteColor;
+    padding: 20px 60px;
+    font-size: 28px;
+    transition: all 250ms;
+
+    &:hover {
+      transition: all 250ms;
+      color: $blueColor;
+      background-color: $whiteColor;
+    }
+  }
+}

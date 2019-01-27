@@ -18,7 +18,7 @@ var stylesheets = [
 // converts sass into final stylesheet file
 gulp.task('sass', function () {
     return gulp
-        .src('sass/marketing.scss')
+        .src('sass/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
@@ -38,7 +38,6 @@ gulp.task('serve', function() {
 
     // watch files and build/reload where needed
     gulp.watch(['**/*.scss'], ['sass']);
-    gulp.watch('images/**/*', ['copy-images']);
     gulp.watch('**/*.html').on('change', browserSync.reload);
 });
 
