@@ -187,6 +187,22 @@ header {
   }
 }
 
+#instagram {
+  margin-top: 50px;
+
+  .post-thumbnail {
+    width: 33%;
+    box-sizing: border-box;
+    padding: 30px;
+    display: inline-block;
+
+    img {
+      width: 100%;
+      max-height: 366px;
+    }
+  }
+}
+
 .social-media {
   background-color: $blueColor;
 

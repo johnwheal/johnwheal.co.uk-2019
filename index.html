@@ -165,6 +165,13 @@
             });
         </script>
     </div>
+    <div class="section instagram">
+        <div class="page-container">
+            <h2>Latest on Instagram</h2>
+            <div class="line"></div>
+            <div id="instagram"></div>
+        </div>
+    </div>
     <div class="section social-media">
         <div class="page-container">
             <h2>Follow on Social Media</h2>
@@ -183,5 +190,37 @@
             <p class="copyright">&copy; John Wheal - All Rights Reserved</p>
         </div>
     </footer>
+<script>
+    $( document ).ready(function() {
+        "use strict";
+
+        $.ajax({
+            url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=247835289.1c9b80d.5a54ccf9f4e8423aa601a0db88a0602c&callback=?',
+
+            error: function () {
+                alert('error');
+            },
+
+            success: function (data) {
+                var html = "";
+                for (var i = 0, l = 9; i < l; i++) {
+                    var image = data.data[i];
+                    var imageUrl = image.images.standard_resolution.url;
+
+                    if (image.type == 'video' || image.id == '1506825438361907131_247835289') {
+                        l++;
+                    } else {
+
+                        html += ' <div class="post-thumbnail"><img src="' + imageUrl + '" alt=""></div>';
+                    }
+                }
+
+                $('#instagram').append(html);
+            },
+            type: 'GET',
+            dataType: "jsonp"
+        });
+    });
+</script>
 </body>
 </html>
