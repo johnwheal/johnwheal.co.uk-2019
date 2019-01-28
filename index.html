@@ -111,7 +111,7 @@
             <div class="item withImage" width="600" height="800" style="background-image: url(/images/highlights/photo-6.jpg);">
                 <div class="overlay">
                     <div class="texts">
-                        <h1>Found Group Hub Limited whilst at University</h1>
+                        <h1>Founded Group Hub Limited whilst at University</h1>
                     </div>
                 </div>
             </div>
@@ -204,11 +204,19 @@
     $( document ).ready(function() {
         "use strict";
 
+        $(".withImage").click(function() {
+            $(".withImage").each(function (index) {
+                $(this).find(".overlay").css('opacity', '0');
+            });
+
+            $(this).find(".overlay").css('opacity', '1.0');
+        });
+        
         $.ajax({
             url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=247835289.1c9b80d.5a54ccf9f4e8423aa601a0db88a0602c&callback=?',
 
             error: function () {
-                alert('error');
+                $(".instagram").remove();
             },
 
             success: function (data) {

@@ -93,6 +93,12 @@ header {
 
   @media (max-width: 1000px) {
     .johnwheal-photo {
+      width: 450px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .johnwheal-photo {
       display: none;
     }
   }
