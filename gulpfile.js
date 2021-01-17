@@ -54,7 +54,7 @@ var filesToMove = [
     'index.html',
     './css/**/*.*',
     './js/**/*.*',
-    './img/**/*.*'
+    './images/**/*.*'
 ];
 
 gulp.task('build-prod', ['sass'], function() {
