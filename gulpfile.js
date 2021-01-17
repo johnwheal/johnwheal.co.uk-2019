@@ -51,7 +51,6 @@ gulp.task('build', ['sass']);
 gulp.task('default', ['build', 'serve']);
 
 var filesToMove = [
-    'index.html',
     './css/**/*.*',
     './scripts/**/*.*',
     './images/**/*.*',
@@ -62,4 +61,6 @@ gulp.task('build-prod', ['sass'], function() {
     gulp.src('dist', {read: false}).pipe(clean());
 
     gulp.src(filesToMove, { base: './' }).pipe(gulp.dest('dist'));
+
+    gulp.src(['index.html']).pipe(replace('{TIMESTAMP}', Date.now())).pipe(gulp.dest('dist/'));
 });

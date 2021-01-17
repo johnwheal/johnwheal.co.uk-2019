@@ -26,13 +26,14 @@ b {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-image: url('/images/header-background.jpg');
   background-repeat: no-repeat;
   box-sizing: border-box;
   background-size: cover;
-  position: relative;
-  background-position: center;
+  position: fixed;
+  background-position: bottom;
+  z-index: -100;
 
   .title-wrapper {
     padding-top: 10vh;
@@ -126,8 +127,14 @@ header {
   }
 }
 
+.padding {
+  height: 50vh;
+}
+
 .about {
-  padding: 10vh 0;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: white;
 
   .photo {
     max-width: 400px;
@@ -145,8 +152,7 @@ header {
     display: inline-block;
     margin-left: 100px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-35%);
 
     p {
       font-size: 18px;
@@ -279,12 +285,15 @@ header {
 }
 
 .born-to-engineer {
-  iframe {
+  background-color: white;
+  
+  img {
+    max-height: 200px;
+    max-width: 100%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width: 100%;
   }
 }
 
@@ -301,8 +310,50 @@ header {
   }
 }
 
+.the-wheal-group {
+  width: 100%;
+  background-image: url('/images/the-wheal-group-background.jpg');
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  img {
+    max-width: 700px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+  }
+
+  .button {
+    color: $whiteColor;
+    font-weight: $fontBold;
+    text-decoration: none;
+    border: solid 4px $whiteColor;
+    padding: 20px 60px;
+    font-size: 28px;
+    transition: all 250ms;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    width: 200px;
+
+    &:hover {
+      transition: all 250ms;
+      color: black;
+      background-color: $whiteColor;
+    }
+  }
+}
+
 .highlights {
   padding-bottom: 0;
+  background-color: white;
 
   #myMosaic {
     display: block;
