@@ -11,6 +11,9 @@ var browserSync = require('browser-sync').create();
 var copy = require('gulp-copy');
 var rename = require('gulp-rename');
 
+var clean = require('gulp-clean');
+var replace = require('gulp-replace');
+
 var stylesheets = [
     '**/*.scss'
 ];
@@ -46,3 +49,16 @@ gulp.task('build', ['sass']);
 
 // when running `gulp` to build, watch and re-build
 gulp.task('default', ['build', 'serve']);
+
+var filesToMove = [
+    'index.html',
+    './css/**/*.*',
+    './js/**/*.*',
+    './img/**/*.*'
+];
+
+gulp.task('build-prod', ['sass'], function() {
+    gulp.src('dist', {read: false}).pipe(clean());
+
+    gulp.src(filesToMove, { base: './' }).pipe(gulp.dest('dist'));
+});

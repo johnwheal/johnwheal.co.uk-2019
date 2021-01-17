@@ -33,31 +33,25 @@ header {
   background-size: cover;
   position: relative;
   background-position: center;
-  padding-left: 100px;
 
-  .menu {
-    float: right;
-    padding-top: 35px;
+  .title-wrapper {
+    padding-top: 10vh;
+  }
 
-    li {
-      display: inline-block;
-      border-right: solid 2px $whiteColor;
-      padding: 0 10px;
+  img {
+    height: 50vh;
+  }
 
-      &:last-child {
-        border-right: none;
-      }
-    }
-
-    a {
-      color: $whiteColor;
-      text-decoration: none;
-      font-size: 18px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  .title-container {
+    background-color: rgba(#000, 0.7);
+    display: table;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: auto;
+    right: auto;
   }
 
   h1 {
@@ -66,9 +60,9 @@ header {
     font-size: 55px;
     color: $whiteColor;
     border-bottom: solid 4px $whiteColor;
-    display: inline-block;
-    padding: 35vh 0 30px 0;
+    display: block;
     line-height: 1.5;
+    text-align: center;
   }
 
   h2 {
@@ -76,18 +70,20 @@ header {
     color: $whiteColor;
     padding-top: 30px;
     line-height: 1.5;
+    text-align: center;
+    width: 100%;
   }
 
   .johnwheal-photo {
-    background-image: url('/images/johnwheal.png');
+    //background-image: url('/images/johnwheal.png');
     width: 600px;
-    height: 90vh;
+    height: 70vh;
     box-sizing: border-box;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     position: absolute;
-    bottom: 0;
+    bottom: 15vh;
     right: 5vw;
   }
 
@@ -391,7 +387,7 @@ footer {
   padding: 20px 0;
 
   .copyright {
-    text-align: right;
+    text-align: center;
     font-size: 18px;
   }
 }
