@@ -53,7 +53,7 @@ gulp.task('default', ['build', 'serve']);
 var filesToMove = [
     'index.html',
     './css/**/*.*',
-    './js/**/*.*',
+    './scripts/**/*.*',
     './images/**/*.*'
 ];
 
